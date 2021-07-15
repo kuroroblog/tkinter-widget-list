@@ -19,7 +19,7 @@ class Application(tk.Frame):
         # Canvasについて : https://kuroro.blog/python/V63iINoXI8iwMeRMEJPK/
         canvas = tk.Canvas(frame, width=250, height=500, background="white")
 
-        # canvasへ線を描画する。
+        # canvas Widgetへ線を描画する。
         # x1座標 : 200, y1座標 : 200, x2座標 : 10, y2座標 : 20, x3座標 : 60, y3座標 : 100, x4座標 : 40, y4座標 : 30
         # fill : 線の色を設定
         # Canvasについて : https://kuroro.blog/python/ANyM9WLpd0LSXRQAELOj/
