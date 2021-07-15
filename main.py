@@ -71,7 +71,7 @@ class Application(tk.Frame):
         frame.pack()
 
         # frame Widget(Frame)を親要素として、text Widgetを作成する。
-        # Textについて : https://kuroro.blog/python/PUZp77YFxrXvMCjpZbUg/
+        # Textについて : https://kuroro.blog/python/bK6fWsP9LMqmER1CBz9E/
         text = tk.Text(frame)
         # frame Widget(Frame)を親要素として、text Widgetをどのように配置するのか?
         # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
