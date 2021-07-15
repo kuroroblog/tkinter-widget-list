@@ -1,5 +1,6 @@
 import tkinter as tk
 
+
 class Application(tk.Frame):
     # canvas Widgetを取得する関数
     def getCanvas(self):
@@ -182,7 +183,7 @@ class Application(tk.Frame):
         # menubarへ、Fileと名付けられたメインメニューを追加する。そしてFileと名付けられたメインメニュー内に、サブメニューを追加する。
         # メインメニューとは? : https://kotobank.jp/word/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC-9213
         # label : メインメニュー名の設定
-        # menu : メインメニュー内に含む、サブメニュー
+        # menu : メインメニュー内に含む、サブメニューを設定
         menuBar.add_cascade(label="File", menu=fileMenu)
 
     # radiobutton Widgetを取得する関数
@@ -276,6 +277,7 @@ class Application(tk.Frame):
         # self.getText()
         # self.getScrollBar()
         # self.getCanvas()
+
 
 # Tkinter初学者参考 : https://docs.python.org/ja/3/library/tkinter.html#a-simple-hello-world-program
 if __name__ == "__main__":
