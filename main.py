@@ -2,6 +2,31 @@ import tkinter as tk
 
 
 class Application(tk.Frame):
+    # optionmenu Widgetを取得する関数
+    def getOptionMenu(self):
+        # Windowを親要素として、frame Widget(Frame)を作成する。
+        # Frameについて : https://kuroro.blog/python/P20XOidA5nh583fYRvxf/
+        frame = tk.Frame(self.master)
+        # Windowを親要素として、frame Widget(Frame)をどのように配置するのか?
+        # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
+        frame.pack()
+
+        # 現在選択されているoptionmenu Widget内の選択肢の値を、文字列変数として扱う。
+        # StringVarについて : https://kuroro.blog/python/K53voPjJuKFfYrjmP8FP/
+        var = tk.StringVar()
+        # set() : 初期値としてaaaの選択肢を設定する。
+        var.set('aaa')
+
+        # frame Widget(Frame)を親要素として、optionmenu Widgetを作成する。
+        # var : 現在選択されている選択肢の値。文字列変数(var)として値を持たせることで、可変として扱う。
+        # 'aaa', 'bbb' : 選択肢1, 選択肢2
+        # OptionMenuについて : https://kuroro.blog/python/LA789mm56rcPTvU3gfdW/
+        optionmenu = tk.OptionMenu(frame, var, 'aaa', 'bbb')
+
+        # frame Widget(Frame)を親要素とした場合に、optionmenu Widgetをどのように配置するのか?
+        # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
+        optionmenu.pack()
+
     # canvas Widgetを取得する関数
     def getCanvas(self):
         # Windowを親要素として、frame Widget(Frame)を作成する。
@@ -277,6 +302,7 @@ class Application(tk.Frame):
         # self.getText()
         # self.getScrollBar()
         # self.getCanvas()
+        # self.getOptionMenu()
 
 
 # Tkinter初学者参考 : https://docs.python.org/ja/3/library/tkinter.html#a-simple-hello-world-program
