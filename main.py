@@ -1,7 +1,25 @@
 import tkinter as tk
-
+from tkinter import ttk
 
 class Application(tk.Frame):
+    # combobox Widgetを取得する関数
+    def getCombobox(self):
+        # Windowを親要素として、frame Widget(Frame)を作成する。
+        # Frameについて : https://kuroro.blog/python/P20XOidA5nh583fYRvxf/
+        frame = tk.Frame(self.master)
+        # Windowを親要素として、frame Widget(Frame)をどのように配置するのか?
+        # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
+        frame.pack()
+
+        # frame Widget(Frame)を親要素として、combobox Widgetを作成する。
+        # values : comboboxを選択すると、表示される様々な選択肢(バイキンマン, 食パンまんとする)の設定
+        # Comboboxについて : https://kuroro.blog/python/3ZzPkezBOeTN7lletMyG/
+        combobox = ttk.Combobox(frame, values=('バイキンマン', '食パンまん'))
+
+        # frame Widget(Frame)を親要素とした場合に、combobox Widgetをどのように配置するのか?
+        # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
+        combobox.pack()
+
     # optionmenu Widgetを取得する関数
     def getOptionMenu(self):
         # Windowを親要素として、frame Widget(Frame)を作成する。
@@ -303,6 +321,7 @@ class Application(tk.Frame):
         # self.getScrollBar()
         # self.getCanvas()
         # self.getOptionMenu()
+        # self.getCombobox()
 
 
 # Tkinter初学者参考 : https://docs.python.org/ja/3/library/tkinter.html#a-simple-hello-world-program
