@@ -1,7 +1,25 @@
 import tkinter as tk
+from tkinter import scrolledtext
 from tkinter import ttk
 
 class Application(tk.Frame):
+    # scrolledtext Widgetを取得する関数
+    def getScrolledText(self):
+        # Windowを親要素として、frame Widget(Frame)を作成する。
+        # Frameについて : https://kuroro.blog/python/P20XOidA5nh583fYRvxf/
+        frame = tk.Frame(self.master)
+        # Windowを親要素として、frame Widget(Frame)をどのように配置するのか?
+        # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
+        frame.pack()
+
+        # frame Widget(Frame)を親要素として、scrolledtext Widgetを作成する。
+        # ScrolledTextについて : https://kuroro.blog/python/r3HUUg7yh60zwYuwnmm2/
+        scrolledText = scrolledtext.ScrolledText(frame)
+
+        # frame Widget(Frame)を親要素とした場合に、scrolledtext Widgetをどのように配置するのか?
+        # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
+        scrolledText.pack()
+
     # combobox Widgetを取得する関数
     def getCombobox(self):
         # Windowを親要素として、frame Widget(Frame)を作成する。
@@ -322,6 +340,7 @@ class Application(tk.Frame):
         # self.getCanvas()
         # self.getOptionMenu()
         # self.getCombobox()
+        # self.getScrolledText()
 
 
 # Tkinter初学者参考 : https://docs.python.org/ja/3/library/tkinter.html#a-simple-hello-world-program
