@@ -3,6 +3,24 @@ from tkinter import scrolledtext
 from tkinter import ttk
 
 class Application(tk.Frame):
+    # progressbar Widgetを取得する関数
+    def getProgressBar(self):
+        # Windowを親要素として、frame Widget(Frame)を作成する。
+        # Frameについて : https://kuroro.blog/python/P20XOidA5nh583fYRvxf/
+        frame = tk.Frame(self.master)
+        # Windowを親要素とした場合に、frame Widget(Frame)をどのように配置するのか?
+        # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
+        frame.pack()
+
+        # frame Widget(Frame)を親要素として、progressbar Widgetを作成する。
+        # value : バーの値の初期化。
+        # Progressbarについて : https://kuroro.blog/python/HY4ECz19LqMW0oAxDJzj/
+        progressbar = ttk.Progressbar(frame, value=50)
+
+        # frame Widget(Frame)を親要素とした場合に、progressbar Widgetをどのように配置するのか?
+        # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
+        progressbar.pack()
+
     # scrolledtext Widgetを取得する関数
     def getScrolledText(self):
         # Windowを親要素として、frame Widget(Frame)を作成する。
@@ -341,6 +359,7 @@ class Application(tk.Frame):
         # self.getOptionMenu()
         # self.getCombobox()
         # self.getScrolledText()
+        # self.getProgressBar()
 
 
 # Tkinter初学者参考 : https://docs.python.org/ja/3/library/tkinter.html#a-simple-hello-world-program
